@@ -1,0 +1,184 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* body color */
+.back{
+ background: #1d2b3a;
+} 
+  /*head div design  */
+.head{
+    background:#00ffd5;
+}
+.form-control{
+    border: 1px solid (255, 255, 255, 0.25);
+    background:#1d2b3a;
+    border-radius:5px;
+    transition:5s;
+}
+
+.link {
+    text-decoration: none;
+}
+
+/* Button design */
+
+.btn {
+    
+    border:none;
+    outline:none;
+    color:#fff;
+    background:#111;
+    cursor:pointer;
+    position: relative;
+    z-index:0;
+    border-radius:10px;
+    font-weight:bolder;
+}
+.btn::before{
+    content:'';
+    background:linear-gradient(45deg,#ff0000,#ff7300,#fffb00,#48ff00,#00ffd5,#002bff,#7a00ff,#ff00c8,#ff0000);
+ position: absolute;
+ top:-2px;
+ left:-2px;
+ background-size:400%;
+ z-index:-1;
+ filter: blur(5px);
+ width: calc(100% + 4px);
+ height: calc(100% + 4px);
+ animation: glowing 20s linear infinite;
+ opacity:0;
+ transition: opacity .3s ease-in-out;
+ border-radius:10px;
+}
+
+.btn:hover::before{
+    opacity:1;
+}
+.btn::after{
+    z-index:1;
+    content:'';
+    position: absolute;
+     
+}
+@keyframes glowing{
+    0%{ background-position:0 0;}
+    50% {background-position: 400% 0;}
+    100%{ background-position: 0 0;}
+}
+
+
+/* form design */
+
+.inputBox{
+    position: relative;
+
+}
+.inputBox input{
+    padding:10px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background:#1d2b3a;
+    border-radius:5px;
+    color: #fff;
+    font-size:1em;
+    transition:5s;
+}
+.inputBox span{
+    position: absolute;
+    left:0;
+    padding:10px;
+    pointer-events: none;
+    font-size:1em;
+    color:white;
+    transition:0.5s;
+}
+.inputBox input:valid ~span,
+.inputBox input:focus ~span{
+    color: #00ffd5; 
+    transform:translateX(10px) translateY(-7px);
+    font-size:0.75em;
+    padding:0 10px;
+    border-left:1px solid #00ffd5;
+    border-right:1px solid #00ffd5;
+    letter-spacing:0.2em;
+    background: #00ffd5;
+    color: #1d2b3a;
+}
+.inputBox input:valid ,
+.inputBox input:focus{
+    border: 1px solid #00ffd5;
+}
+.inputBox select{
+    padding:10px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background:#1d2b3a;
+    border-radius:5px;
+    color: #fff;
+    font-size:1em;
+    transition:5s;;
+}
+.inputBox span{
+    position: absolute;
+    left:0;
+    padding:10px;
+    pointer-events: none;
+    font-size:1em;
+    color:white;
+    transition:0.5s;
+}
+.inputBox select:valid ~span,
+.inputBox select:focus ~span{
+    color: #00ffd5; 
+    transform:translateX(10px) translateY(-7px);
+    font-size:0.75em;
+    padding:0 10px;
+    border-left:1px solid #00ffd5;
+    border-right:1px solid #00ffd5;
+    letter-spacing:0.2em;
+    background: #00ffd5;
+    color: #1d2b3a;
+}
+
+
+/* Image design */
+.img{
+    border:5px solid #00ffd5;
+    border-radius:9px;
+    box-shadow:0 0 10px 10px #00ffd5;
+}
+
+
+/* react database page */
+.background{
+background:linear-gradient(to right,#00ffd5,#1d2b3a);
+animation-name: back;
+animation-duration:4s;
+}
+@keyframes back{
+    0%{ background-color:plum;}
+    50% {background-color: #ff7300;}
+    100%{ background-color: yellowgreen;}
+}
+
+.face{
+    background:#00ffd5;
+    font-size: 20px ;
+    font-weight: bolder;
+    border:5px solid #1d2b3a;
+    border-radius:9px;
+    box-shadow:0 0 10px 10px #00ffd5;
+}
+
+.log{
+
+    background:#00ffd5;
+    font-size: 20px ;
+    font-weight: bolder;
+    border:5px solid #1d2b3a;
+    border-radius:9px;
+    box-shadow:0 0 10px 10px #00ffd5;
+    font-size: 20px ;
+    font-weight: bolder;
+}
